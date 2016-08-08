@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		742EE0E11D58F7DD00E9F7AB /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 742EE0E01D58F7DD00E9F7AB /* main.c */; };
+		742EE0E91D58F87300E9F7AB /* BasicMath.c in Sources */ = {isa = PBXBuildFile; fileRef = 742EE0E71D58F87300E9F7AB /* BasicMath.c */; };
+		742EE0EB1D58FA7100E9F7AB /* Generators.c in Sources */ = {isa = PBXBuildFile; fileRef = 742EE0EA1D58FA7100E9F7AB /* Generators.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		742EE0DD1D58F7DD00E9F7AB /* CCalculator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CCalculator; sourceTree = BUILT_PRODUCTS_DIR; };
 		742EE0E01D58F7DD00E9F7AB /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		742EE0E71D58F87300E9F7AB /* BasicMath.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = BasicMath.c; sourceTree = "<group>"; };
+		742EE0EA1D58FA7100E9F7AB /* Generators.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Generators.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			isa = PBXGroup;
 			children = (
 				742EE0E01D58F7DD00E9F7AB /* main.c */,
+				742EE0E71D58F87300E9F7AB /* BasicMath.c */,
+				742EE0EA1D58FA7100E9F7AB /* Generators.c */,
 			);
 			path = CCalculator;
 			sourceTree = "<group>";
@@ -119,6 +125,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				742EE0E91D58F87300E9F7AB /* BasicMath.c in Sources */,
+				742EE0EB1D58FA7100E9F7AB /* Generators.c in Sources */,
 				742EE0E11D58F7DD00E9F7AB /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
