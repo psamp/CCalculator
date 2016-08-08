@@ -7,9 +7,12 @@
 //
 
 #include <stdio.h>
+#include "BasicMath.h"
 
 int main(int argc, const char * argv[]) {
     
-    printf("Would you like to do addition, subtraction, multiplication, or divison?");
+    printf("Would you like to do addition (enter 1), subtraction (enter 2), multiplication (enter 3), or divison(enter 4)? Or would you like to generate n amount of odd numbers?");
+    
+    int option = 0;
     
 }
