@@ -9,41 +9,11 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-void generateNOddNumbers(int n) {
-    
-    int numbers[n*2];
-    
-    for (int i = 0; i < n*2; i++) {
-        numbers[i] = i;
-        
-    }
-    
-    for (int i = 0; i < n*2; i++) {
-        
-        if(numbers[i] % 2 != 0) {
-            printf("%d \n", numbers[i]);
-        }
-        
-    }
-    
-}
-
-
-double add(int a, int b) {
-    return a + b;
-}
-
-double subtract(int a, int b) {
-    return a - b;
-}
-
-double multiply(int a, int b) {
-    return a * b;
-}
-
-double divide(int a, int b) {
-    return a / b;
-}
+void generateNOddNumbers(int n);
+double add(int a, int b);
+double subtract(int a, int b);
+double multiply(int a, int b);
+double divide(int a, int b);
 
 int main(int argc, const char * argv[]) {
     
@@ -119,4 +89,39 @@ int main(int argc, const char * argv[]) {
     printf("Thanks for playing.\n");
     
     return 0;
+}
+
+void generateNOddNumbers(int n) {
+    
+    int numbers[n*2];
+    
+    for (int i = 0; i < n*2; i++) {
+        numbers[i] = i;
+        
+    }
+    
+    for (int i = 0; i < n*2; i++) {
+        
+        if(numbers[i] % 2 != 0) {
+            printf("%d \n", numbers[i]);
+        }
+        
+    }
+    
+}
+
+double add(int a, int b) {
+    return a + b;
+}
+
+double subtract(int a, int b) {
+    return a - b;
+}
+
+double multiply(int a, int b) {
+    return a * b;
+}
+
+double divide(int a, int b) {
+    return a / b;
 }
