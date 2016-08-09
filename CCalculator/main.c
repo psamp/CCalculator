@@ -11,11 +11,21 @@
 
 void generateNOddNumbers(int n) {
     
-    for (int i = 0; i <= n; i++) {
-        if (i % 2 != 0 ) {
-            printf("%d \n", i);
-        }
+    int numbers[n*2];
+    
+    for (int i = 0; i < n*2; i++) {
+        numbers[i] = i;
+        
     }
+    
+    for (int i = 0; i < n*2; i++) {
+        
+        if(numbers[i] % 2 != 0) {
+            printf("%d \n", numbers[i]);
+        }
+        
+    }
+    
 }
 
 
@@ -31,6 +41,10 @@ double multiply(int a, int b) {
     return a * b;
 }
 
+double divide(int a, int b) {
+    return a / b;
+}
+
 int main(int argc, const char * argv[]) {
     
     bool running = true;
@@ -41,7 +55,7 @@ int main(int argc, const char * argv[]) {
         
         fpurge(stdin);
         
-        printf(" Addition: enter + \n Subtraction: enter - \n Multiplication: enter * \n First n odd numbers: n \n Exit: enter x \n");
+        printf(" Addition: enter + \n Subtraction: enter - \n Multiplication: enter * \n Division: enter / \n First n odd numbers: n \n Exit: enter x \n");
         scanf("%c", option);
         
         double firstNum;
@@ -80,6 +94,24 @@ int main(int argc, const char * argv[]) {
             printf("\n%lf * %lf = %lf \n",firstNum, secondNum, multiply(firstNum, secondNum));
             
             
+        } else if(option[0] == symbols[3]) {
+            
+            bool noZeros = false;
+            
+            if (firstNum != 0 && secondNum != 0) {
+                
+                noZeros = true;
+            }
+            
+            while (noZeros) {
+                printf("Enter the first operand:");
+                scanf("%lf", &firstNum);
+                
+                printf("Enter the second operand:");
+                scanf("%lf", &secondNum);
+                noZeros = false;
+            }
+            
         } else if(option[0] == 'n') {
             
             printf("Enter how many odd numbers you want:");
@@ -88,10 +120,7 @@ int main(int argc, const char * argv[]) {
             
             generateNOddNumbers(firstNum);
             
-            
-        }
-        
-        else if(option[0] == 'x') {
+        } else if(option[0] == 'x') {
             
             running = false;
         }
