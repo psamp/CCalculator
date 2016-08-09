@@ -55,41 +55,40 @@ int main(int argc, const char * argv[]) {
         
         fpurge(stdin);
         
-        printf(" Addition: enter + \n Subtraction: enter - \n Multiplication: enter * \n Division: enter / \n First n odd numbers: n \n Exit: enter x \n");
+        printf("\nAddition: enter +\nSubtraction: enter -\nMultiplication: enter *\nDivision: enter /\nFirst n odd numbers: n\nTo exit: x\n");
         scanf("%c", option);
         
-        double firstNum;
-        double secondNum;
+        double firstNum = 0;
+        double secondNum = 0;
         
-        
-        if (option[0] == symbols[0]) {
-            
+        if (option[0] == symbols[0] || option[0] == symbols[1] || option[0] == symbols[2] || option[0] == symbols[3]) {
             printf("Enter the first operand:");
             scanf("%lf", &firstNum);
             
             printf("Enter the second operand:");
             scanf("%lf", &secondNum);
+            
+        } else if (option[0] == 'n') {
+            
+            printf("Enter how many odd numbers you want:");
+            
+            scanf("%lf", &firstNum);
+        
+        } else if(option[0] == 'x') {
+            running = false;
+        }
+        
+        
+        if (option[0] == symbols[0]) {
             
             printf("\n%lf + %lf = %lf \n",firstNum, secondNum, add(firstNum, secondNum));
             
         } else if(option[0] == symbols[1]) {
             
-            printf("Enter the first operand:");
-            scanf("%lf", &firstNum);
-            
-            printf("Enter the second operand:");
-            scanf("%lf", &secondNum);
-            
             printf("\n%lf - %lf = %lf \n",firstNum, secondNum, subtract(firstNum, secondNum));
             
             
         } else if(option[0] == symbols[2]) {
-            
-            printf("Enter the first operand:");
-            scanf("%lf", &firstNum);
-            
-            printf("Enter the second operand:");
-            scanf("%lf", &secondNum);
             
             printf("\n%lf * %lf = %lf \n",firstNum, secondNum, multiply(firstNum, secondNum));
             
@@ -101,30 +100,20 @@ int main(int argc, const char * argv[]) {
             if (firstNum != 0 && secondNum != 0) {
                 
                 noZeros = true;
+            } else {
+                printf("\nCannot divide by 0. \n");
             }
             
             while (noZeros) {
-                printf("Enter the first operand:");
-                scanf("%lf", &firstNum);
-                
-                printf("Enter the second operand:");
-                scanf("%lf", &secondNum);
+                printf("\n%lf / %lf = %lf \n",firstNum, secondNum, divide(firstNum, secondNum));
                 noZeros = false;
             }
             
         } else if(option[0] == 'n') {
             
-            printf("Enter how many odd numbers you want:");
-            
-            scanf("%lf", &firstNum);
-            
             generateNOddNumbers(firstNum);
             
-        } else if(option[0] == 'x') {
-            
-            running = false;
         }
-        
     }
     
     printf("Thanks for playing.\n");
